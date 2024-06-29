@@ -1,46 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .search-container {
-            text-align: center;
-        }
-
-        .search-input {
-            padding: 10px;
-            font-size: 16px;
-        }
-
-        .search-button {
-            padding: 10px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Search Book</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="img/bookIcon.svg">
 </head>
 
 <body>
     <div class="search-container">
-        <input type="text" class="search-input" placeholder="Search...">
-        <button class="search-button" onclick="search()">Search</button>
+        <h1>Inserisci la categoria di libro che stai cercando nella barra di ricerca.</h1>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button"><img src="img/searchButton.svg" alt="search"></button>
+        </div>
     </div>
-    <div id="list">
-        
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <div id="list" class="result-container"></div>
+
     <script src="index.js"></script>
 </body>
 
